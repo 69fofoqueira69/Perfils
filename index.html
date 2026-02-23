@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfils</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Perfils</h1>
+      <p>Busque e abra o perfil completo de cada personagem.</p>
+      <input id="searchInput" type="search" placeholder="Pesquisar por nome, universo, espécie..." />
+    </header>
+
+    <main>
+      <section id="listView" class="view">
+        <div id="cardsGrid" class="cards-grid"></div>
+      </section>
+
+      <section id="detailView" class="view hidden">
+        <button id="backButton" class="back-btn">← Voltar para lista</button>
+        <article id="profileDetail" class="profile-detail"></article>
+      </section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="profile-card">
+        <div>
+          <h3 class="card-name"></h3>
+          <p class="card-meta"></p>
+          <p class="card-desc"></p>
+        </div>
+        <button class="open-btn">Ver perfil completo</button>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
