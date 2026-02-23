@@ -1,0 +1,148 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-2: #334155;
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(120deg, #0f172a 0%, #111827 45%, #0f172a 100%);
+  color: var(--text);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  border-bottom: 1px solid #475569;
+  z-index: 5;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.topbar p {
+  margin: 0.4rem 0 0.8rem;
+  color: #cbd5e1;
+}
+
+#searchInput {
+  width: min(900px, 100%);
+  border: 1px solid #64748b;
+  background: #0b1220;
+  color: var(--text);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+main {
+  width: min(1100px, 100% - 2rem);
+  margin: 1rem auto 2.5rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.profile-card,
+.profile-detail,
+.metric,
+.block {
+  border-radius: 1rem;
+  border: 1px solid #475569;
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.profile-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-name {
+  margin: 0;
+}
+
+.card-meta,
+.card-desc {
+  margin: 0.5rem 0 0;
+  color: #cbd5e1;
+}
+
+.open-btn,
+.back-btn {
+  border: none;
+  background: linear-gradient(90deg, #06b6d4, #38bdf8);
+  color: #0f172a;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+
+.back-btn {
+  margin-bottom: 0.8rem;
+}
+
+.profile-detail {
+  padding: 1.2rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.7rem;
+}
+
+.metric,
+.block {
+  padding: 0.8rem;
+}
+
+.metric h4,
+.block h3 {
+  margin: 0 0 0.5rem;
+}
+
+.metric p,
+.block p,
+.block li {
+  margin: 0.25rem 0;
+  color: #cbd5e1;
+}
+
+h2 {
+  margin: 0 0 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.empty {
+  color: #94a3b8;
+  text-align: center;
+  padding: 1rem;
+}
